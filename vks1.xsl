@@ -33,20 +33,15 @@
           <xsl:with-param name="element" select="."/>
         </xsl:call-template>
       </xsl:when>
-      
-      <!-- homonüümianumbrit peaks käsitlema eelex-m all -->
-      <!-- <xsl:when test="w:rPr/w:vertAlign[@w:val = 'superscript']">
-        <vot:hom><xsl:value-of select="w:t"/></vot:hom>
-      </xsl:when>
-      -->
-      
-      <!-- ülejäänud juhtumeid ei peaks lõpuks olema -->
+            
+      <!-- ülejäänud juhtumid väljastatakse testimisel -->
       <xsl:otherwise>
         <xsl:value-of select="normalize-space(w:t)"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
   
+  <!-- Märksõna ekstraheerimine -->
   <xsl:template name="eelex-m">
     <xsl:param name="element"/>
     <vot:m>
