@@ -1,3 +1,17 @@
-# Lisada faas kaks transformatsioon
-Lisada "VKS 1 faas 2" XSLT-transformatsioon, mis teeb esimese faasi struktuuri ümber õigeks EELex XMLiks.
-* struktureerib märksõnad oma märksõnagruppide alla, sealjuures koondab homonüümianumbritega märksõnad kokku
+# Kasutada transformatsiooni-olekuid
+* Sõelumisel nt tekstisõnede lühendite, autori- ja külanimede asendamine on korduv protsess, mida võiks välja kutsuda eri elementide juurest kasutades olekut. Oleku tõttu ei väljutaks elemendi piiridest.
+
+
+# Mõtteid
+## Konstantide leidmine
+* Homonüümianumber on ülakirjas, samuti märksõnaviidetes
+* Jooksud tekstiga "vt. ka" märgivad märksõnaviidet
+* Jooksud kriipsuga ja American Typewriter Light fondiga
+* Pärisnimed ja lühendid
+* Smallcaps
+```distinct-values(//*:r[exists(.//*:smallCaps)]/*:t/data())```
+
+## Rasked kohad
+* transkriptsioonimärgid on smallcapsis! Lasta InDesignis need ära vahetada unikoodi märkidega?
+
+

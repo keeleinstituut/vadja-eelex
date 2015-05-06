@@ -7,10 +7,19 @@ Sõnaraamatu trükifailid on masinloetavad ja võimaldavad automaatset muundamis
 
 Käesolev projekt hõlmab transformatsioonifaile ehk XSLT. Projekt on mõeldud järk-järguliselt arenevaks ja selle peamiseks tagasiside kanaliks on mõeldud tulev otsimootor ning projekti veateated ([Issues](https://github.com/keeleinstituut/vadja-eelex/issues)).
 
+
+## Projekti arendamine
+
 Üldine arengukäik:
 1. eristada sõnastiku märksõnad ja seada nende vasteks kirje ülejäänud tekst
 1.1 koondada homonüüminumbriga märksõnad kokku sama märksõnagrupi alla
 2. eristada vaste teksti struktuuri
 2.1. autorielement
 2.2. külaelemendid
+
+
+## Tehnoloogia
+Kasutatakse Saxon HE
+```java -jar /usr/share/java/saxon.jar -s:"../docx-xml/VKS 1 A-H.docx.xml" -xsl:"VKS 1 A-H.xsl" -o:"VKS 1 A-H.eelex-proov.xml"```
+
 
